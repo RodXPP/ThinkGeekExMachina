@@ -1,3 +1,5 @@
+[![Build](https://github.com/RodXPP/ThinkGeekExMachina/actions/workflows/workflow.yaml/badge.svg)](https://github.com/RodXPP/ThinkGeekExMachina/actions/workflows/workflow.yaml)
+
 # Multi-Language Project Repository
 
 This is a repository for storing and building projects written in various languages. This repository is equipped with a continuous integration setup using GitHub Actions that compiles and builds projects in the following languages:
