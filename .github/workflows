@@ -1,0 +1,40 @@
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        project: ${{ fromJson(steps.set-matrix.outputs.matrix) }}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set matrix for dynamic paths
+      id: set-matrix
+      run: |
+        dirs=()
+        while IFS= read -r -d '' dir; do
+          dirs+=("$dir")
+        done < <(find . -mindepth 2 -maxdepth 2 -type d -print0)
+
+        echo "::set-output name=matrix::$(printf '%s\n' "${dirs[@]}" | jq -R -s -c 'split("\n")[:-1]')"
+
+    - name: Build
+      run: |
+        case "${{ matrix.project }}" in
+          c/*) gcc -o ${{ matrix.project }}/out ${{ matrix.project }}/src/*.c ;;
+          c++/*) g++ -o ${{ matrix.project }}/out ${{ matrix.project }}/src/*.cpp ;;
+          c#/*) dotnet build ${{ matrix.project }}/src ;;
+          python/*) python -m compileall ${{ matrix.project }}/src ;;
+          rust/*) cargo build --manifest-path ${{ matrix.project }}/src/Cargo.toml ;;
+          golang/*) go build -v -o ${{ matrix.project }}/out ${{ matrix.project }}/src/*.go ;;
+          nodejs/*) npm --prefix ${{ matrix.project }}/src install && npm --prefix ${{ matrix.project }}/src run build ;;
+          javascript/*) npm --prefix ${{ matrix.project }}/src install && npm --prefix ${{ matrix.project }}/src run build ;;
+          typescript/*) npm --prefix ${{ matrix.project }}/src install && npm --prefix ${{ matrix.project }}/src run build ;;
+          *) echo "Unknown project type: ${{ matrix.project }}" ; exit 1 ;;
+        esac
+
