@@ -17,11 +17,14 @@ Each project should be located in a subdirectory of the appropriate language dir
 The directory structure for each project should be as follows:
 
 ```
-language/person/src/filename.cpp for C++
-language/person/src/filename.c for C
+cpp/person/src/filename.cpp for C++
+c/person/src/filename.c for C
+c#/person/src/Program.cs for C#
+python/person/src/main.py for Python
+go/person/src/main.go for GO
 ```
 
-And so on and so forth, where `language` is the programming language, `person` is the name of the person who created the project, and `src/` contains the source files of the project.
+Where `language` is the programming language, `person` is the name of the person who created the project, and `src/` contains the source files of the project.
 
 ## Building
 
