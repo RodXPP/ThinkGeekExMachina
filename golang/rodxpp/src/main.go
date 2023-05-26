@@ -1,0 +1,8 @@
+//print hello geeks in go
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello Geeks!")
+}
