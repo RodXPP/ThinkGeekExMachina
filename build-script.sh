@@ -10,6 +10,11 @@ for project in */*; do
   # Determine the language based on the parent directory
   language=$(dirname "$project")
 
+  # Check if project is a C# Playground, if so, skip
+  if [[ "$language" == "c#" && "$project" == *"Playground"* ]]; then
+    continue
+  fi
+
   # Build the project based on the language
   case "$language" in
     c)
