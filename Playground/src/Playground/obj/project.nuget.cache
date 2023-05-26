@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "oXlsac9QO/bXX9mHLzhm1GhyWrjjIe4jYnVIICGQBmKIRWApkQammuCTGUNWkzhjkj8GpY1+kQYOi72QlQtyWg==",
+  "success": true,
+  "projectFilePath": "/home/rod/ThinkGeekExMachina/Playground/src/Playground/Playground.csproj",
+  "expectedPackageFiles": [
+    "/home/rod/.nuget/packages/microsoft.netcore.app.ref/6.0.16/microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "/home/rod/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.16/microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
+    "/home/rod/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.16/microsoft.netcore.app.host.linux-x64.6.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}

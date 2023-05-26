@@ -1,0 +1,16 @@
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/bin/Debug/net6.0/Playground
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/bin/Debug/net6.0/Playground.deps.json
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/bin/Debug/net6.0/Playground.runtimeconfig.json
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/bin/Debug/net6.0/Playground.dll
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/bin/Debug/net6.0/Playground.pdb
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/obj/Debug/net6.0/Playground.csproj.AssemblyReference.cache
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/obj/Debug/net6.0/Playground.GeneratedMSBuildEditorConfig.editorconfig
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/obj/Debug/net6.0/Playground.AssemblyInfoInputs.cache
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/obj/Debug/net6.0/Playground.AssemblyInfo.cs
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/obj/Debug/net6.0/Playground.csproj.CoreCompileInputs.cache
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/obj/Debug/net6.0/Playground.sourcelink.json
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/obj/Debug/net6.0/Playground.dll
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/obj/Debug/net6.0/refint/Playground.dll
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/obj/Debug/net6.0/Playground.pdb
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/obj/Debug/net6.0/Playground.genruntimeconfig.cache
+/home/rod/ThinkGeekExMachina/Playground/src/Playground/obj/Debug/net6.0/ref/Playground.dll
