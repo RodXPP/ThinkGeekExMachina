@@ -1,4 +1,4 @@
-name: Build
+name: Playground Many Languages
 
 on: [push, pull_request]
 
