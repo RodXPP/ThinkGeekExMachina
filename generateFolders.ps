@@ -1,0 +1,10 @@
+# Define the array of languages
+$languages = @("c", "cpp", "c#", "python", "golang")
+
+# Iterate over each language
+foreach ($language in $languages) {
+    # Check if directory does not exist and then create it
+    if (!(Test-Path -Path $language)) {
+        New-Item -ItemType Directory -Force -Path $language
+    }
+}
