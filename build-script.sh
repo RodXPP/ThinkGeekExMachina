@@ -20,7 +20,7 @@ for project in */*; do
     c)
       files=("$project/src/"*.c)
       [[ -e "${files[0]}" ]] && gcc -o "$project/out" "${files[@]}" ;;
-    c++)
+    cpp)
       files=("$project/src/"*.cpp)
       [[ -e "${files[0]}" ]] && g++ -o "$project/out" "${files[@]}" ;;
     c#)
