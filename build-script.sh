@@ -5,15 +5,15 @@ set -e
 
 # Iterate over every subdirectory of every language directory
 for project in */*; do
+  # Skip the Playground folder
+  if [[ "$project" == "Playground"* ]]; then
+    continue
+  fi
+
   echo "Building project $project..."
 
   # Determine the language based on the parent directory
   language=$(dirname "$project")
-
-  # Check if project is a C# Playground, if so, skip
-  if [[ "$language" == "c#" && "$project" == *"Playground"* ]]; then
-    continue
-  fi
 
   # Build the project based on the language
   case "$language" in
@@ -24,7 +24,9 @@ for project in */*; do
       files=("$project/src/"*.cpp)
       [[ -e "${files[0]}" ]] && g++ -o "$project/out" "${files[@]}" ;;
     c#)
-      [[ -d "$project/src" ]] && dotnet build "$project/src" ;;
+      if [[ "$project" != *"Playground"* ]]; then
+        [[ -d "$project/src" ]] && dotnet build "$project/src"
+      fi ;;
     python)
       files=("$project/src/"*.py)
       [[ -e "${files[0]}" ]] && for file in "${files[@]}"; do python -m py_compile "$file"; python "$file"; done ;;
@@ -36,3 +38,4 @@ for project in */*; do
       exit 1 ;;
   esac
 done
+
